@@ -1,0 +1,96 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "run-client",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"client",
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"127.0.0.1",
+				"--port",
+				"5174"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "run-server",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"server",
+				"exec",
+				"--",
+				"node",
+				"server.js"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "run-server",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"server",
+				"exec",
+				"--",
+				"node",
+				"server.js"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "start-website-client",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"client",
+				"run",
+				"dev",
+				"--",
+				"--host",
+				"127.0.0.1",
+				"--port",
+				"5174"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "start-website-api",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"--prefix",
+				"server",
+				"exec",
+				"--",
+				"node",
+				"server.js"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "start-website-api-direct",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"server/server.js"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

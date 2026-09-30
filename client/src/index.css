@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Segoe UI', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #172033;
+  background: #F8F7F3;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.daymark-spin {
+  animation: daymark-spin 26s linear infinite;
+}
+
+.daymark-orbit {
+  animation: daymark-orbit 12s ease-in-out infinite alternate;
+}
+
+.daymark-float {
+  animation: daymark-float 7s ease-in-out infinite;
+}
+
+@keyframes daymark-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes daymark-orbit {
+  0% { transform: rotate(-22deg) scaleY(.92); }
+  100% { transform: rotate(22deg) scaleY(1.04); }
+}
+
+@keyframes daymark-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .daymark-spin, .daymark-orbit, .daymark-float { animation: none; }
+}
